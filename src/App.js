@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [originalPrice, setOriginalPrice] = useState('');
+  const [discount, setDiscount] = useState('');
+  const [finalPrice, setFinalPrice] = useState(null);
+
+  const calculateDiscount = () => {
+    const price = parseFloat(originalPrice);
+    const discountAmount = parseFloat(discount);
+    if (!isNaN(price) && !isNaN(discountAmount)) {
+      const discountedPrice = price - (price * discountAmount / 100);
+      setFinalPrice(discountedPrice.toFixed(2));
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Bill Discount Calculator</h1>
+      <input
+        type="number"
+        placeholder="Original Price"
+        value={originalPrice}
+        onChange={(e) => setOriginalPrice(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Discount %"
+        value={discount}
+        onChange={(e) => setDiscount(e.target.value)}
+      />
+      <button onClick={calculateDiscount}>Calculate</button>
+      {finalPrice !== null && (
+        <p>Final Price: ₹{finalPrice}</p>
+      )}
     </div>
   );
 }
