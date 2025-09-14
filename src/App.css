@@ -1,52 +1,66 @@
+/* General Body */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f3f0; /* soft off-white */
+    color: #3b3a36;
+    line-height: 1.6;
 }
 
+/* App Container */
 .App {
-  max-width: 400px;
-  margin: 5rem auto;
-  padding: 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  text-align: center;
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #fbe6e0; /* soft peachy pink */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    border-radius: 20px;
+    text-align: center;
 }
 
+/* Header */
 h1 {
-  color: #333;
-  margin-bottom: 2rem;
+    color: #5a3921; /* deep brown */
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 2rem;
 }
 
+/* Inputs */
 input {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d6a77a; /* muted terracotta border */
+    border-radius: 12px;
+    font-size: 1rem;
 }
 
+/* Buttons */
 button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #0078d4;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #c77d52; /* muted burnt orange */
+    color: #fff8f0;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    font-style: italic;
 }
 
 button:hover {
-  background-color: #005fa3;
+    background-color: #a65d35; /* slightly darker burnt orange */
+    transform: translateY(-2px);
 }
 
+/* Result Text */
 p {
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-  color: #0078d4;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #5a3921; /* deep brown */
+    font-style: italic;
 }
